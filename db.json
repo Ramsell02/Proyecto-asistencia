@@ -1,8 +1,20 @@
 {
-    "users":[
-
-    ],
-    "tickets":[
-        
-    ]
+  "users": [
+    
+    {
+      "id": "7d90",
+      "nombre": "caleb",
+      "email": "caleb@hotmail.com",
+      "contrasena": "123456789",
+      "confirmarContra": "123456789"
+    },
+    {
+      "id": "642f",
+      "nombre": "ramsell",
+      "email": "r.solanogutierrezfwd@gmail.com",
+      "contrasena": "12345678",
+      "confirmarContra": "12345678"
+    }
+  ],
+  "tickets": []
 }
