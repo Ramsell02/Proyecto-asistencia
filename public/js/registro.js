@@ -7,8 +7,7 @@ const email = document.getElementById("email");
 const contrasena = document.getElementById("contrasena");
 const confirmarContra = document.getElementById("confirmarContra");
 const boton = document.getElementById("registrar");
-const profresor = document.getElementById("profesor");
-const estudiante = document.getElementById("estudiante");
+
 
 
 boton.addEventListener("click", async () => {
@@ -16,16 +15,17 @@ boton.addEventListener("click", async () => {
     const infoUsuarios = await getUsers() //para trae al usuario
 
     const verificacion = infoUsuarios.find(user => email.value === user.email)
-
+     
     console.log(verificacion);
 
-    if (verificacion === undefined) {
+    if (verificacion === undefined ) {
 
         const usuario = {
             nombre: nombre.value,
             email: email.value,
             contrasena: contrasena.value,
             confirmarContra: confirmarContra.value,
+            rol: "Estudiante",
         }
         const usuarioNuevo = await postUsers(usuario)
         Swal.fire({
@@ -49,6 +49,14 @@ boton.addEventListener("click", async () => {
         });
     }
 
+
+
+
+
+
+
+
+    
 })
 
 

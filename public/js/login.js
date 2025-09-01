@@ -29,16 +29,30 @@ boton.addEventListener("click",async () => {
 
         });
         
-     }else{
+     }if(usuario.rol === "Estudiante") {
          Swal.fire({
             title: "usuario encontrado!",
-            text: "buenvenido!"+ usuario.nombre,
+            text: "bienvenido!"+ usuario.nombre,
             icon: "success",
             confirmButtonText: "ir a la pagina principal",
         }).then((result) => {
             if (result.isConfirmed) {
                 // Redirección a la pagina principal
+                localStorage.setItem("usuarioLogin",JSON.stringify(usuario));
                 window.location.href ="../pages/interfazE.html";
+            }
+        });
+     }else{
+        Swal.fire({
+            title: "usuario encontrado!",
+            text: "bienvenido!"+ usuario.nombre,
+            icon: "success",
+            confirmButtonText: "ir a la pagina principal",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Redirección a la pagina principal
+                localStorage.setItem("usuarioLogin",JSON.stringify(usuario));
+                window.location.href ="../pages/interfazP.html";
             }
         });
      }

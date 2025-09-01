@@ -40,9 +40,9 @@ async function postTickets(tickets) {
 
         })
 
-        const tickets = await response.json()
+        const ticketsr = await response.json()
 
-        return tickets
+        return ticketsr
 
 
     } catch (error) {
@@ -58,11 +58,11 @@ export{postTickets}
 
 
 
-async function putTickets(tickets,id) {
+async function patchTickets(tickets,id) {
 
     try {
-        const response = await fetch('http://localhost:3001/tickets'+id,{
-            method:'PUT',
+        const response = await fetch('http://localhost:3001/tickets/'+id,{
+            method:'PATCH',
             headers:{
                 'Content-Type': 'application/json'
                 
@@ -71,9 +71,9 @@ async function putTickets(tickets,id) {
 
         })
 
-        const tickets = await response.json()
+        const ticketsR = await response.json()
 
-        return tickets
+        return ticketsR
 
 
     } catch (error) {
@@ -85,14 +85,14 @@ async function putTickets(tickets,id) {
     
 }
 
-export{putTickets}
+export{patchTickets}
 
 
 
 async function deleteTickets(id) {
 
     try {
-        const response = await fetch('http://localhost:3001/tickets'+id,{
+        const response = await fetch('http://localhost:3001/tickets/'+id,{
             method:'DELETE',
             headers:{
                 'Content-Type': 'application/json'

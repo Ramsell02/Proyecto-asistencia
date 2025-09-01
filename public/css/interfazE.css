@@ -1,0 +1,59 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  margin: 0;
+  padding: 0;
+  color: #e2e8f0;
+}
+
+#saludo {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+  background: #1e40af;
+  color: #f1f5f9;
+  border-bottom: 3px solid #3b82f6;
+}
+
+#principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+#principal button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  background: #2563eb;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+#principal button:hover {
+  background: #1d4ed8;
+}
+
+#tickets, #selector {
+  padding: 8px;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  background: #0f172a;
+  color: #f1f5f9;
+  width: 200px;
+}
+
+#panelDudas {
+  margin: 2rem auto;
+  width: 80%;
+  min-height: 200px;
+  border: 2px dashed #3b82f6;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #1e293b;
+}

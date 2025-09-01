@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/interfazE.css">
     <title>interfazE</title>
 </head>
 <body>
     <div id="saludo">Bienvenido</div>
     <section id="principal">
-       
-       <button id="botonVer">Ver historial de tickets</button><br>
-       <button id="botonCrear">crear ticket</button>
-       <input type="text" id="botonCrear">
+       <button id="cerrar">Cerrar sesion</button><br>
+      
+       <button id="botonCrear">Enviar ticket</button>
+       <input type="text" id="tickets">
+       <select name="profes" id="selector">
+        <option value="profesor0">profesores</option>
+        <option value="steven">steven</option>
+        <option value="Barry">Barry</option>
+       </select>
     </section>
     <section id="panelDudas">
        
@@ -22,7 +28,7 @@
 
 
 
-
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="module" src="../js/interfazE.js"></script>
 </body>
 </html>
