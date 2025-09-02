@@ -1,4 +1,4 @@
-import { getTickets } from "../services/funtionsTickets.js";
+import { getTickets, patchTickets } from "../services/funtionsTickets.js";
 const panelProfesores = document.getElementById("interProfe");
 
 
@@ -35,12 +35,33 @@ async function ticketsRecibidos() {
 
 
 
-        botonResponder.addEventListener("click",async function () {
+        botonResponder.addEventListener("click", async function () {
+            const { value: text } = await Swal.fire({
+                title: "Responder ticket",
+                input: "textarea",
+                inputLabel: "Escribe tu respuesta:",
+                inputPlaceholder: "Tu respuesta aquí...",
+                inputAttributes: {
+                    "aria-label": "Escribe tu respuesta aquí"
+                },
+                showCancelButton: true,
+                confirmButtonText: "Enviar",
+                cancelButtonText: "Cancelar"
+            });
+            if (text) {
+                await patchTickets({
+                    respuesta:text,
+                    estatus: "Resuelto"
+                },Element.id);
+                Swal.fire("¡Respuesta enviada!", "", "success");
+               
+                ticketsRecibidos();
+                
+            }
 
-            
         })
 
-
+console.log("Ticket recibido:", Element);
 
 
     })

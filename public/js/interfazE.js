@@ -47,8 +47,9 @@ botonCrear.addEventListener("click", async () => {
 
 async function datosTickets() {
     const ticketsEnviados = await getTickets();
+    const filtradaUser = ticketsEnviados.filter(ticket => ticket.estudiante === infoUsuariosL.id)
     panelDudas.textContent = "";
-    const listatickets = ticketsEnviados.map(Element => {
+    const listatickets = filtradaUser.map(Element => {
         let nuevoT = document.createElement("div")
         const botonEditar = document.createElement("button");
         const botonEliminar = document.createElement("button");

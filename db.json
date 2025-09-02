@@ -31,25 +31,49 @@
       "contrasena": "123456",
       "confirmarContra": "123456",
       "rol": "Estudiante"
+    },
+    {
+      "id": "18ce",
+      "nombre": "",
+      "email": "",
+      "contrasena": "",
+      "confirmarContra": "",
+      "rol": "Estudiante"
+    },{
+      "id": "472k",
+      "nombre": "steven",
+      "email": "ssalasl@fwdcostarica.com",
+      "contrasena": "12345678",
+      "confirmarContra": "12345678",
+      "rol": "Profesor"
     }
   ],
   "tickets": [
     {
-      "id": "857b",
+      "id": "a0c3",
       "ticket": "hola",
       "selector": "steven",
-      "estatus": "En revision",
-      "estudiante": "7d90",
-      "fecha": "2025-09-01T21:34:20.141Z",
-      "respuesta": ""
+      "estatus": "Resuelto",
+      "estudiante": "3984",
+      "fecha": "2025-09-02T14:43:18.660Z",
+      "respuesta": "hadfdsdsga"
     },
     {
-      "id": "c97e",
+      "id": "7c00",
       "ticket": "duda",
       "selector": "Barry",
       "estatus": "En revision",
+      "estudiante": "3984",
+      "fecha": "2025-09-02T14:43:29.997Z",
+      "respuesta": ""
+    },
+    {
+      "id": "bf2c",
+      "ticket": "duda",
+      "selector": "steven",
+      "estatus": "En revision",
       "estudiante": "7d90",
-      "fecha": "2025-09-01T21:34:45.598Z",
+      "fecha": "2025-09-02T15:57:12.555Z",
       "respuesta": ""
     }
   ]
